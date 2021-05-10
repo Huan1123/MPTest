@@ -21,6 +21,7 @@ public class UserController {
 
     @GetMapping("/{id}")
     public String getUserById(@PathVariable Long id) {
+        System.out.println("hot-fix");
         System.out.println(123456);
         System.out.println(123);
         User byId = userService.getById(id);
