@@ -4,7 +4,6 @@ import com.alibaba.fastjson.JSONObject;
 import com.example.demo.pojo.User;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +21,7 @@ public class UserController {
 
     @GetMapping("/{id}")
     public String getUserById(@PathVariable Long id) {
+        System.out.println(123);
         User byId = userService.getById(id);
         return JSONObject.toJSONString(byId);
     }   
