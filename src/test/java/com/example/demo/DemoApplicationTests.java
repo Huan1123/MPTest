@@ -21,7 +21,7 @@ class DemoApplicationTests {
 
     @Test
     public void Test01(){
-        System.out.println("select method test------------------");
+        System.out.println("select method test--------------1----");
         List<User> users = userMapper.selectList(null);
         users.forEach(System.out::println);
         User user = userMapper.selectById(1);
